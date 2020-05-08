@@ -1,0 +1,17 @@
+@media screen and (min-width:768px){
+    .allDetails{
+        width: 70vw;
+        margin: 5% auto;
+        padding: 1.5rem;
+    }
+    button{
+        width: 30%;
+    }
+    .form{
+        margin: 5% auto;
+        &__button__container{
+            width: 50%;
+            justify-content: flex-start;
+        }
+    }
+}

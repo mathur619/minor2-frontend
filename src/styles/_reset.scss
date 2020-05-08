@@ -1,0 +1,18 @@
+@font-face{
+    font-family: 'Montserrat';
+    src:url('../fonts/Montserrat-Regular.ttf')
+}
+
+html,body,p,ul,li,a,div,button{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #383838;
+    font-family: 'Montserrat';
+    
+}
+li{
+    list-style-type: none;
+}
+
+

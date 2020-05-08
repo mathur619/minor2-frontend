@@ -1,0 +1,126 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat-Regular.ttf");
+}
+
+html, body, p, ul, li, a, div, button {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #383838;
+  font-family: 'Montserrat';
+}
+
+li {
+  list-style-type: none;
+}
+
+.navbar {
+  height: 5vh;
+  background-color: #FF1259;
+  color: #fff;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 40vh;
+  width: 70vw;
+  max-width: 700px;
+  padding: 2rem;
+  margin: 10% auto;
+  background-color: white;
+  -webkit-box-shadow: 0 1px 6px 2px rgba(0, 0, 0, 0.09);
+          box-shadow: 0 1px 6px 2px rgba(0, 0, 0, 0.09);
+}
+
+.form__button__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+input {
+  margin-bottom: 1rem;
+  font-family: 'Montserrat';
+  padding: 0.2rem;
+  border: 1px solid #6b6b6b;
+}
+
+button {
+  padding: 0.2rem;
+  width: 40%;
+  outline: none;
+  font-weight: 600;
+  background-color: #FF1259;
+  border: 2px solid #FF1259;
+  color: #fff;
+}
+
+.backButton {
+  color: #FF1259;
+  background-color: #fff;
+}
+
+.allDetails {
+  padding: 1rem;
+  margin: 10% auto;
+  width: 90vw;
+  height: 40vh;
+  font-size: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background: #fff;
+  -webkit-box-shadow: 0 1px 6px 2px rgba(0, 0, 0, 0.09);
+          box-shadow: 0 1px 6px 2px rgba(0, 0, 0, 0.09);
+}
+
+@media screen and (min-width: 768px) {
+  .allDetails {
+    width: 70vw;
+    margin: 5% auto;
+    padding: 1.5rem;
+  }
+  button {
+    width: 30%;
+  }
+  .form {
+    margin: 5% auto;
+  }
+  .form__button__container {
+    width: 50%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import AllDetails from './AllDetails'
 
 function App(){
 
@@ -14,24 +15,18 @@ function App(){
     function handleClick(event){
         event.preventDefault()
         const {name}= event.target
-        // console.log(name)
         if(name === 'next')
             setIndex(prevIndex => prevIndex+1)
         else if(name === 'back')
             setIndex(prevIndex => prevIndex-1)
-   
-        // console.log(index)
     }
-    function handleSubmit(event){
-        event.preventDefault()
-        console.log(formData)
-    }
+  
 
     function handleSwitch(index){
         switch(index){
             case 1:
                 return(
-                    <div>
+                    <div className="form">
                         <label for="firstname"> First Name </label>
                         <input type="text" id="firstname" name="firstname" value={formData.firstname} onChange={handleChange}/>
                         <label for="lastname"> Last Name </label>
@@ -44,42 +39,55 @@ function App(){
 
             case 2:
                 return(
-                    <div>
+                    <div className="form">
                         <label for="houseNo"> House Number </label>
                         <input type="text" id="houseNo" name="houseNo" value={formData.houseNo} onChange={handleChange}/>
                         <label for="street"> Street </label>
                         <input type="text" id="street" name="street" value={formData.street} onChange={handleChange}/>
                         <label for="city"> City </label>
                         <input type="text" id="city" name="city" value={formData.city} onChange={handleChange}/>
-                        <button onClick={handleClick} name="back"> Back </button>
-                        <button onClick={handleClick} name="next"> Next </button>
+                        <div className="form__button__container">
+                            <button onClick={handleClick} name="next"> Next </button>
+                            <button onClick={handleClick} name="back" className="backButton"> Back </button>
+                        </div>
                     </div>
                   
                 )
 
             case 3:
                 return(
-                    <div>
+                    <div className="form">
                         <label for="cardNo"> Card Number </label>
                         <input type="text" id="cardNo" name="cardNo" value={formData.cardNo} onChange={handleChange}/>
                         <label for="cardName"> Card Name </label>
                         <input type="text" id="cardName" name="cardName" value={formData.cardName} onChange={handleChange}/>
                         <label for="cvv"> CVV </label>
                         <input type="text" id="cvv" name="cvv" value={formData.cvv} onChange={handleChange}/>
-                        <button onClick={handleClick} name="back"> Back </button>
-                        <button> Submit </button>
+                        <div className="form__button__container">
+                            <button> Submit </button>
+                            <button onClick={handleClick} name="back" className="backButton"> Back </button>
+                        </div>
                     </div>
                    
+                )
+            case 4:
+                return(
+                    <div className="allDetails">
+                        <AllDetails allDetails={formData} />
+                        <button onClick={handleClick} name="back" className="backButton"> Back </button>
+                    </div>
                 )   
         }
     }
 
-    // console.log(index)
-    // console.log(formData)
+  
     return(
-        <form onSubmit={handleSubmit}>
+        <div>
+        <div className="navbar"> Pipesort Technology </div>
+        <form onSubmit={handleClick} name="next" >
             {handleSwitch(index)}
         </form>
+        </div>
     )
     
 }
