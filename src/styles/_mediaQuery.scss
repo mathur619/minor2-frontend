@@ -1,4 +1,7 @@
 @media screen and (min-width:768px){
+    html{
+        font-size: 18px;
+    }
     .allDetails{
         width: 70vw;
         margin: 5% auto;
@@ -6,12 +9,17 @@
     }
     button{
         width: 30%;
+        margin-right: 5%;
     }
+
     .form{
         margin: 5% auto;
         &__button__container{
-            width: 50%;
+            width: 100%;
             justify-content: flex-start;
         }
+    }
+    input{
+        height: 25px;
     }
 }
